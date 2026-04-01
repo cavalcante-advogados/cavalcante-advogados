@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cavalcante Advogados | Direito Condominial em João Pessoa</title>
+<meta name="description" content="Advogada especialista em Direito Condominial em João Pessoa. Assessoria jurídica para condomínios, síndicos e administradoras.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -13,7 +14,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Inter', sans-serif;
+font-family:'Inter', sans-serif;
 }
 
 body{
@@ -30,11 +31,17 @@ margin:auto;
 
 header{
 background:#000;
-padding:20px 0;
+padding:18px 0;
 border-bottom:1px solid #c6a75e;
 position:sticky;
 top:0;
 z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
@@ -42,12 +49,6 @@ font-family:'Playfair Display', serif;
 font-size:24px;
 color:#c6a75e;
 font-weight:600;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
 }
 
 nav ul{
@@ -59,7 +60,6 @@ gap:30px;
 nav a{
 color:#fff;
 text-decoration:none;
-font-size:15px;
 transition:.3s;
 }
 
@@ -68,8 +68,10 @@ color:#c6a75e;
 }
 
 .hero{
-padding:120px 0;
-background:linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85));
+background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
+background-size:cover;
+background-position:center;
+padding:140px 0;
 text-align:center;
 }
 
@@ -92,13 +94,8 @@ background:#c6a75e;
 color:#000;
 padding:14px 30px;
 text-decoration:none;
-border-radius:5px;
+border-radius:4px;
 font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-background:#fff;
 }
 
 .section{
@@ -110,7 +107,18 @@ text-align:center;
 margin-bottom:50px;
 color:#c6a75e;
 font-family:'Playfair Display', serif;
-font-size:32px;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-img img{
+width:100%;
+border-radius:8px;
 }
 
 .grid{
@@ -121,9 +129,9 @@ gap:30px;
 
 .card{
 background:#111;
-padding:35px;
+padding:30px;
 border:1px solid #c6a75e33;
-border-radius:10px;
+border-radius:8px;
 transition:.3s;
 }
 
@@ -137,36 +145,34 @@ color:#c6a75e;
 margin-bottom:15px;
 }
 
-.about{
-text-align:center;
-max-width:850px;
-margin:auto;
-font-size:17px;
-}
-
 .diferenciais{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:25px;
-text-align:center;
+gap:20px;
 }
 
 .diferencial{
+text-align:center;
 padding:25px;
 border:1px solid #c6a75e22;
 border-radius:8px;
 }
 
-footer{
-background:#000;
-padding:50px 0;
-text-align:center;
-border-top:1px solid #c6a75e;
+.form input,
+.form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+background:#111;
+border:1px solid #333;
+color:#fff;
 }
 
-footer h3{
-color:#c6a75e;
-margin-bottom:15px;
+footer{
+background:#000;
+padding:40px 0;
+text-align:center;
+border-top:1px solid #c6a75e;
 }
 
 .whatsapp{
@@ -179,10 +185,14 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 0 15px rgba(0,0,0,.5);
 }
 
 @media(max-width:900px){
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
 .grid{
 grid-template-columns:1fr;
 }
@@ -194,6 +204,7 @@ grid-template-columns:1fr;
 .hero h1{
 font-size:32px;
 }
+
 }
 
 </style>
@@ -220,7 +231,7 @@ font-size:32px;
 <section class="hero" id="home">
 <div class="container">
 <h1>Especialista em Direito Condominial</h1>
-<p>Assessoria jurídica completa para condomínios, síndicos e administradoras em João Pessoa com atendimento ágil e estratégico.</p>
+<p>Assessoria jurídica completa para condomínios em João Pessoa com atendimento rápido e estratégico.</p>
 <a href="https://wa.me/5583996295995" class="btn">Agendar Consulta</a>
 </div>
 </section>
@@ -229,14 +240,22 @@ font-size:32px;
 <div class="container">
 <h2>Sobre a Advogada</h2>
 
-<div class="about">
+<div class="about-grid">
+
+<div>
 <p>
 Dra. Luana Larissa Veríssimo Cavalcante Silva é advogada especialista em Direito Condominial em João Pessoa.
 
-Oferece assessoria jurídica completa para condomínios, síndicos e administradoras, com atuação preventiva e contenciosa.
+Oferece assessoria jurídica completa para condomínios, síndicos e administradoras.
 
-Também atua nas áreas de Direito Previdenciário e Direito do Trabalho.
+Também atua em Direito Previdenciário e Direito do Trabalho.
 </p>
+</div>
+
+<div class="about-img">
+<img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
+</div>
+
 </div>
 
 </div>
@@ -250,23 +269,17 @@ Também atua nas áreas de Direito Previdenciário e Direito do Trabalho.
 
 <div class="card">
 <h3>Direito Condominial</h3>
-<p>
-Assessoria jurídica completa para condomínios, cobrança de inadimplentes, assembleias e suporte ao síndico.
-</p>
+<p>Assessoria jurídica completa para condomínios.</p>
 </div>
 
 <div class="card">
 <h3>Direito Previdenciário</h3>
-<p>
-Aposentadoria, revisão de benefícios, auxílio-doença e benefícios negados pelo INSS.
-</p>
+<p>Aposentadorias e benefícios.</p>
 </div>
 
 <div class="card">
 <h3>Direito do Trabalho</h3>
-<p>
-Reclamações trabalhistas, consultoria jurídica e defesa de direitos.
-</p>
+<p>Defesa trabalhista e consultoria.</p>
 </div>
 
 </div>
@@ -309,16 +322,13 @@ Reclamações trabalhistas, consultoria jurídica e defesa de direitos.
 <div class="container">
 <h2>Contato</h2>
 
-<div class="about">
-<p>
-Cavalcante Advogados<br>
-Centro - João Pessoa - PB<br><br>
-WhatsApp: (83) 99629-5995
-</p>
+<div class="form">
 
-<br>
+<input type="text" placeholder="Nome">
+<input type="email" placeholder="Email">
+<textarea rows="5" placeholder="Mensagem"></textarea>
 
-<a href="https://wa.me/5583996295995" class="btn">Falar no WhatsApp</a>
+<a href="https://wa.me/5583996295995" class="btn">Enviar</a>
 
 </div>
 
@@ -330,14 +340,13 @@ WhatsApp: (83) 99629-5995
 <h3>Cavalcante Advogados</h3>
 <p>
 Dra. Luana Larissa Veríssimo Cavalcante Silva<br>
-João Pessoa - PB
+João Pessoa - PB<br>
+WhatsApp: (83) 99629-5995
 </p>
 </div>
 </footer>
 
-<a href="https://wa.me/5583996295995" class="whatsapp">
-WhatsApp
-</a>
+<a href="https://wa.me/5583996295995" class="whatsapp">WhatsApp</a>
 
 </body>
 </html>
