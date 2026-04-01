@@ -140,16 +140,15 @@ line-height:1.6;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
 gap:25px;
 margin-top:30px;
 }
 
 .card.featured{
-grid-column:span 3;
 background:#0d0d0d;
 border:2px solid #c40000;
-padding:30px;
+padding:25px;
 }
 
 .card.featured p{
@@ -266,6 +265,41 @@ grid-template-columns:1fr;
 font-size:32px;
 }
 
+}
+
+
+
+/* Animações */
+.fade-up{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Botão WhatsApp */
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50px;
+font-weight:600;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+text-decoration:none;
+transition:.3s;
+z-index:999;
+}
+
+.whatsapp-float:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
 
 </style>
@@ -437,6 +471,27 @@ WhatsApp: (83) 99629-5995
 </footer>
 
 <a href="https://wa.me/5583996295995" class="whatsapp">WhatsApp</a>
+
+
+
+<a href="https://wa.me/558396295995" class="whatsapp-float" target="_blank">
+WhatsApp
+</a>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show')
+}
+})
+})
+
+document.querySelectorAll('section, .card, .diferenciais div').forEach(el=>{
+el.classList.add('fade-up')
+observer.observe(el)
+})
+</script>
 
 </body>
 </html>
