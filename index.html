@@ -7,6 +7,7 @@
 <meta name="description" content="Advogada especialista em Direito Condominial em João Pessoa">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -121,6 +122,18 @@ text-align:center;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
+}
+
+.card.featured{
+grid-column:span 3;
+background:#0d0d0d;
+border:2px solid #c40000;
+}
+
+.card i{
+font-size:28px;
+margin-bottom:15px;
+color:#c40000;
 }
 
 .card{
@@ -254,19 +267,25 @@ Também atua nas áreas de Direito Previdenciário e Direito do Trabalho.
 
 <div class="grid">
 
-<div class="card">
+<div class="card featured">
+<i class="fa-solid fa-building"></i>
 <h3>Direito Condominial</h3>
-<p>Assessoria completa para condomínios.</p>
+<p>Assessoria jurídica completa para condomínios, síndicos e administradoras. Atuação em cobranças condominiais, elaboração de convenções, assembleias, notificações, conflitos entre condôminos e consultoria preventiva.</p>
+<a href="#contato" class="btn">Saiba Mais</a>
 </div>
 
 <div class="card">
+<i class="fa-solid fa-scale-balanced"></i>
 <h3>Direito Previdenciário</h3>
-<p>Aposentadorias e benefícios.</p>
+<p>Atuação em aposentadorias, pensões, benefícios por incapacidade, revisões previdenciárias e planejamento previdenciário. Atendimento completo junto ao INSS e na via judicial.</p>
 </div>
 
 <div class="card">
+<i class="fa-solid fa-briefcase"></i>
 <h3>Direito do Trabalho</h3>
-<p>Consultoria e defesa.</p>
+<p>Assessoria jurídica trabalhista para empregados e empregadores. Atuação em rescisões, verbas trabalhistas, reclamações trabalhistas, consultoria preventiva e defesa em processos.</p>
+</div>
+
 </div>
 
 </div>
