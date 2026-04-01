@@ -21,6 +21,10 @@ font-family:'Poppins', sans-serif;
 }
 
 body{
+margin:0;
+padding:0;
+background:#000;
+color:#fff;
 background:#0b0b0b;
 color:#fff;
 }
@@ -49,12 +53,15 @@ margin:auto;
 }
 
 header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 0;
 background:#000;
-padding:20px 0;
-border-bottom:2px solid #c40000;
+border-bottom:1px solid #c40000;
 position:sticky;
 top:0;
-z-index:1000;
+z-index:999;
 }
 
 nav{
@@ -86,11 +93,15 @@ color:#c40000;
 }
 
 .hero{
-padding:120px 0;
+padding:80px 0 60px 0;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
+background:linear-gradient(rgba(0,0,0,.90),rgba(0,0,0,.90)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
 background-size:cover;
 background-position:center;
+min-height:420px;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .hero h1{
@@ -305,7 +316,7 @@ box-shadow:0 8px 25px rgba(0,0,0,.4);
 
 
 .logo img{
-height:45px;
+height:40px;
 width:auto;
 }
 
@@ -319,6 +330,53 @@ padding:15px 0;
 @media(max-width:768px){
 .logo img{
 height:35px;
+}
+}
+
+
+
+/* Tipografia Profissional */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+body{
+font-family:'Inter', sans-serif;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display', serif;
+letter-spacing:.5px;
+}
+
+/* Hero Melhorado */
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+opacity:.9;
+margin-bottom:25px;
+}
+
+.btn{
+background:#c40000;
+color:#fff;
+padding:14px 28px;
+border-radius:4px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#ff0000;
+transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:28px;
 }
 }
 
@@ -386,6 +444,7 @@ Também atua nas áreas de Direito Previdenciário e Direito do Trabalho.
 <i class="fa-solid fa-building"></i>
 <h3>Direito Condominial</h3>
 <p>Assessoria jurídica completa para condomínios, síndicos e administradoras. Atuação em cobranças condominiais, elaboração de convenções, assembleias, notificações, conflitos entre condôminos e consultoria preventiva.</p>
+<a href="#contato" class="btn"></a>
 </div>
 
 <div class="card">
@@ -488,6 +547,10 @@ WhatsApp: (83) 99629-5995
 
 </div>
 </footer>
+
+<a href="https://wa.me/5583996295995" class="whatsapp">WhatsApp</a>
+
+
 
 <a href="https://wa.me/558396295995" class="whatsapp-float" target="_blank">
 WhatsApp
