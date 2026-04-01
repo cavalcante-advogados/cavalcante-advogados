@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Cavalcanti Advogados</title>
 
 <style>
@@ -21,44 +22,59 @@ color:#fff;
 
 /* Topo */
 
-.topo{
-background:#c00000;
+.topbar{
+background:#c40000;
 padding:8px;
 text-align:center;
 font-size:14px;
 }
 
-/* Menu */
+/* Header */
 
 header{
 background:#000;
-border-bottom:1px solid #c00000;
-padding:15px 0;
+border-bottom:1px solid #c40000;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+letter-spacing:1px;
 }
 
 .menu{
 display:flex;
-justify-content:space-between;
-align-items:center;
-width:90%;
-margin:auto;
-}
-
-.menu ul{
-display:flex;
-list-style:none;
-gap:25px;
+gap:30px;
 }
 
 .menu a{
 color:#fff;
 text-decoration:none;
-font-size:15px;
+transition:.3s;
 }
 
+.menu a:hover{
+color:#c40000;
+}
+
+/* Botão */
+
 .btn{
-background:#c00000;
-padding:10px 18px;
+background:#c40000;
+padding:10px 20px;
 border-radius:4px;
 text-decoration:none;
 color:#fff;
@@ -72,7 +88,6 @@ background:#ff0000;
 /* Banner */
 
 .hero{
-background:#000;
 padding:120px 20px;
 text-align:center;
 }
@@ -83,33 +98,33 @@ margin-bottom:15px;
 }
 
 .hero p{
-font-size:18px;
-margin-bottom:30px;
 color:#ccc;
+margin-bottom:30px;
+font-size:18px;
 }
 
-/* Areas */
+/* Áreas */
 
 .areas{
-padding:80px 20px;
 background:#050505;
+padding:80px 20px;
 }
 
-.container{
-width:90%;
-margin:auto;
+.areas h2{
+text-align:center;
+margin-bottom:50px;
 }
 
-.areas-grid{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
 .card{
 background:#111;
 padding:30px;
-border-left:4px solid #c00000;
+border-left:4px solid #c40000;
 transition:.3s;
 }
 
@@ -119,12 +134,6 @@ transform:translateY(-5px);
 
 .card h3{
 margin-bottom:15px;
-color:#fff;
-}
-
-.card p{
-color:#ccc;
-line-height:1.6;
 }
 
 /* Contato */
@@ -135,30 +144,43 @@ text-align:center;
 }
 
 .whatsapp{
-display:inline-block;
-margin-top:20px;
 background:#25D366;
 padding:15px 30px;
 border-radius:30px;
 color:#fff;
 text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-.whatsapp:hover{
-transform:scale(1.05);
+display:inline-block;
+margin-top:20px;
 }
 
 /* Rodapé */
 
 footer{
-background:#000;
-border-top:1px solid #c00000;
-text-align:center;
+border-top:1px solid #c40000;
 padding:40px 20px;
-font-size:14px;
+text-align:center;
 color:#ccc;
+font-size:14px;
+}
+
+/* Responsivo */
+
+@media(max-width:768px){
+
+.nav{
+flex-direction:column;
+gap:15px;
+}
+
+.menu{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:30px;
+}
+
 }
 
 </style>
@@ -167,29 +189,38 @@ color:#ccc;
 
 <body>
 
-<div class="topo">
+<div class="topbar">
 João Pessoa - PB | WhatsApp: (83) 99629-5995
 </div>
 
 <header>
+<div class="container nav">
+
+<div class="logo">
+Cavalcanti Advogados
+</div>
+
 <div class="menu">
-<h2>Cavalcanti Advogados</h2>
+<a href="#">Home</a>
+<a href="#">Sobre</a>
+<a href="#">Áreas</a>
+<a href="#">Contato</a>
+</div>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Sobre</a></li>
-<li><a href="#">Áreas</a></li>
-<li><a href="#">Contato</a></li>
-</ul>
-
-<a href="https://wa.me/5583996295995" class="btn">Fale com Especialista</a>
+<a href="https://wa.me/5583996295995" class="btn">
+Fale com Especialista
+</a>
 
 </div>
 </header>
 
 <section class="hero">
+
 <h1>Especialista em Direito Condominial</h1>
-<p>Assessoria jurídica completa para condomínios em João Pessoa</p>
+
+<p>
+Assessoria jurídica completa para condomínios em João Pessoa
+</p>
 
 <a href="https://wa.me/5583996295995" class="btn">
 Agendar Atendimento
@@ -201,31 +232,29 @@ Agendar Atendimento
 
 <div class="container">
 
-<h2 style="margin-bottom:40px;">Áreas de Atuação</h2>
+<h2>Áreas de Atuação</h2>
 
-<div class="areas-grid">
+<div class="grid">
 
 <div class="card">
 <h3>Direito Condominial</h3>
 <p>
-Assessoria jurídica completa para condomínios, síndicos e administradoras. 
-Atuação em cobranças, assembleias, conflitos condominiais e suporte preventivo.
+Assessoria jurídica para condomínios, síndicos e administradoras.
+Cobranças, assembleias e suporte completo.
 </p>
 </div>
 
 <div class="card">
 <h3>Direito Previdenciário</h3>
 <p>
-Atuação em aposentadorias, benefícios do INSS, revisões previdenciárias, 
-planejamento e concessão de benefícios.
+Aposentadorias, revisões, benefícios do INSS e planejamento previdenciário.
 </p>
 </div>
 
 <div class="card">
 <h3>Direito do Trabalho</h3>
 <p>
-Defesa dos direitos trabalhistas, ações trabalhistas, consultoria jurídica 
-para empregados e empregadores.
+Defesa trabalhista, ações judiciais e consultoria jurídica especializada.
 </p>
 </div>
 
@@ -268,7 +297,7 @@ WhatsApp: (83) 99629-5995
 <br>
 
 <p>
-© 2026 - Cavalcanti Advogados  
+© 2026 Cavalcanti Advogados
 </p>
 
 </footer>
