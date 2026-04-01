@@ -17,10 +17,6 @@ box-sizing:border-box;
 font-family:'Poppins', sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 background:#0b0b0b;
 color:#fff;
@@ -33,13 +29,12 @@ margin:auto;
 }
 
 header{
-background:rgba(0,0,0,0.9);
+background:#000;
 padding:20px 0;
 border-bottom:2px solid #c40000;
 position:sticky;
 top:0;
 z-index:1000;
-backdrop-filter:blur(10px);
 }
 
 nav{
@@ -52,7 +47,6 @@ align-items:center;
 font-size:22px;
 font-weight:600;
 color:#c40000;
-animation:fadeDown 1s ease;
 }
 
 nav ul{
@@ -72,23 +66,23 @@ color:#c40000;
 }
 
 .hero{
-padding:160px 0;
+padding:150px 0;
 text-align:center;
-background:linear-gradient(120deg,#000,#0b0b0b);
+background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
 font-size:48px;
 margin-bottom:20px;
 color:#c40000;
-animation:fadeUp 1s ease;
 }
 
 .hero p{
 max-width:650px;
 margin:auto;
 margin-bottom:30px;
-animation:fadeUp 1.3s ease;
 }
 
 .btn{
@@ -99,25 +93,28 @@ text-decoration:none;
 border-radius:5px;
 font-weight:500;
 transition:.3s;
-animation:fadeUp 1.6s ease;
 }
 
 .btn:hover{
 background:#fff;
 color:#000;
-transform:translateY(-2px);
 }
 
 .section{
-padding:100px 0;
+padding:90px 0;
 }
 
 .section h2{
 text-align:center;
-margin-bottom:60px;
+margin-bottom:50px;
 color:#c40000;
 font-size:32px;
-animation:fadeUp 1s ease;
+}
+
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
 }
 
 .grid{
@@ -128,26 +125,15 @@ gap:30px;
 
 .card{
 background:#111;
-padding:35px;
-border-radius:12px;
-transition:.4s;
+padding:30px;
+border-radius:10px;
+transition:.3s;
 border:1px solid #222;
-opacity:0;
-transform:translateY(40px);
-animation:fadeUp 1s ease forwards;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-5px);
 border-color:#c40000;
-}
-
-.card:nth-child(2){
-animation-delay:.2s;
-}
-
-.card:nth-child(3){
-animation-delay:.4s;
 }
 
 .card h3{
@@ -163,21 +149,15 @@ gap:20px;
 
 .diferencial{
 background:#111;
-padding:30px;
+padding:25px;
 text-align:center;
-border-radius:12px;
-transition:.3s;
-}
-
-.diferencial:hover{
-transform:translateY(-5px);
-border:1px solid #c40000;
+border-radius:8px;
 }
 
 .form input,
 .form textarea{
 width:100%;
-padding:14px;
+padding:12px;
 margin-bottom:15px;
 background:#111;
 border:1px solid #333;
@@ -187,7 +167,7 @@ border-radius:5px;
 
 footer{
 background:#000;
-padding:50px 0;
+padding:40px 0;
 text-align:center;
 border-top:2px solid #c40000;
 }
@@ -202,46 +182,6 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 0 20px rgba(196,0,0,.4);
-animation:pulse 2s infinite;
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes pulse{
-0%{
-box-shadow:0 0 0 0 rgba(196,0,0,.7);
-}
-
-70%{
-box-shadow:0 0 0 15px rgba(196,0,0,0);
-}
-
-100%{
-box-shadow:0 0 0 0 rgba(196,0,0,0);
-}
 }
 
 @media(max-width:900px){
@@ -272,6 +212,7 @@ font-size:32px;
 
 <ul>
 <li><a href="#home">Home</a></li>
+<li><a href="#sobre">Sobre</a></li>
 <li><a href="#areas">Áreas</a></li>
 <li><a href="#contato">Contato</a></li>
 </ul>
@@ -283,8 +224,27 @@ font-size:32px;
 <section class="hero" id="home">
 <div class="container">
 <h1>Especialista em Direito Condominial</h1>
-<p>Assessoria jurídica completa para condomínios em João Pessoa com atendimento ágil e estratégico.</p>
+<p>Assessoria jurídica completa para condomínios em João Pessoa.</p>
 <a href="https://wa.me/5583996295995" class="btn">Agendar Consulta</a>
+</div>
+</section>
+
+<section class="section" id="sobre">
+<div class="container">
+<h2>Sobre a Advogada</h2>
+
+<div class="about">
+
+<p>
+Dra. Luana Larissa Veríssimo Cavalcante Silva é especialista em Direito Condominial em João Pessoa.
+
+Oferece assessoria jurídica completa para condomínios, síndicos e administradoras.
+
+Também atua nas áreas de Direito Previdenciário e Direito do Trabalho.
+</p>
+
+</div>
+
 </div>
 </section>
 
@@ -307,6 +267,37 @@ font-size:32px;
 <div class="card">
 <h3>Direito do Trabalho</h3>
 <p>Consultoria e defesa.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Diferenciais</h2>
+
+<div class="diferenciais">
+
+<div class="diferencial">
+<h4>Especialista</h4>
+<p>Direito Condominial</p>
+</div>
+
+<div class="diferencial">
+<h4>Atendimento</h4>
+<p>João Pessoa</p>
+</div>
+
+<div class="diferencial">
+<h4>Consultoria</h4>
+<p>Preventiva</p>
+</div>
+
+<div class="diferencial">
+<h4>Suporte</h4>
+<p>Completo</p>
 </div>
 
 </div>
