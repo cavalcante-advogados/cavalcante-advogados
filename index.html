@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cavalcante Advogados | Direito Condominial em João Pessoa</title>
-<meta name="description" content="Advogada especialista em Direito Condominial em João Pessoa">
+<meta name="description" content="Advogada especialista em Direito Condominial em João Pessoa. Assessoria jurídica para condomínios, direito previdenciário e trabalhista.">
+<meta name="keywords" content="advogada João Pessoa, direito condominial João Pessoa, advogado condomínio João Pessoa, direito previdenciário João Pessoa">
+<meta name="author" content="Cavalcante Advogados">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -21,6 +23,23 @@ font-family:'Poppins', sans-serif;
 body{
 background:#0b0b0b;
 color:#fff;
+}
+
+.topbar{
+background:#c40000;
+padding:8px 0;
+text-align:center;
+font-size:14px;
+}
+
+.topbar span{
+margin:0 15px;
+}
+
+.cta-nav{
+background:#c40000;
+padding:8px 18px;
+border-radius:5px;
 }
 
 .container{
@@ -102,7 +121,7 @@ color:#000;
 }
 
 .section{
-padding:90px 0;
+padding:110px 0;
 }
 
 .section h2{
@@ -113,9 +132,10 @@ font-size:32px;
 }
 
 .about{
-max-width:800px;
+max-width:700px;
 margin:auto;
 text-align:center;
+line-height:1.6;
 }
 
 .grid{
@@ -128,6 +148,16 @@ gap:30px;
 grid-column:span 3;
 background:#0d0d0d;
 border:2px solid #c40000;
+padding:40px;
+text-align:left;
+}
+
+.card.featured p{
+max-width:800px;
+}
+
+.card.featured .btn{
+margin-top:15px;
 }
 
 .card i{
@@ -162,9 +192,16 @@ gap:20px;
 
 .diferencial{
 background:#111;
-padding:25px;
+padding:30px 20px;
 text-align:center;
 border-radius:8px;
+border:1px solid #222;
+transition:.3s;
+}
+
+.diferencial:hover{
+border-color:#c40000;
+transform:translateY(-3px);
 }
 
 .form input,
@@ -180,9 +217,10 @@ border-radius:5px;
 
 footer{
 background:#000;
-padding:40px 0;
+padding:60px 0;
 text-align:center;
 border-top:2px solid #c40000;
+margin-top:40px;
 }
 
 .whatsapp{
@@ -198,6 +236,22 @@ font-weight:600;
 }
 
 @media(max-width:900px){
+
+.topbar{
+font-size:12px;
+}
+
+nav ul{
+flex-direction:column;
+background:#000;
+position:absolute;
+top:80px;
+right:0;
+width:200px;
+padding:20px;
+display:none;
+}
+
 
 .grid{
 grid-template-columns:1fr;
@@ -218,6 +272,11 @@ font-size:32px;
 </head>
 <body>
 
+<div class="topbar">
+<span>João Pessoa - PB</span>
+<span>WhatsApp: (83) 99629-5995</span>
+</div>
+
 <header>
 <div class="container">
 <nav>
@@ -228,6 +287,7 @@ font-size:32px;
 <li><a href="#sobre">Sobre</a></li>
 <li><a href="#areas">Áreas</a></li>
 <li><a href="#contato">Contato</a></li>
+<li><a href="https://wa.me/5583996295995" class="cta-nav">Fale com Especialista</a></li>
 </ul>
 
 </nav>
@@ -324,6 +384,17 @@ Também atua nas áreas de Direito Previdenciário e Direito do Trabalho.
 </div>
 </section>
 
+<section class="section">
+<div class="container">
+<h2>Localização</h2>
+
+<div style="margin-top:30px;border-radius:10px;overflow:hidden">
+<iframe src="https://www.google.com/maps?q=Centro%20Jo%C3%A3o%20Pessoa%20PB&output=embed" width="100%" height="350" style="border:0;"></iframe>
+</div>
+
+</div>
+</section>
+
 <section class="section" id="contato">
 <div class="container">
 <h2>Contato</h2>
@@ -345,9 +416,22 @@ Também atua nas áreas de Direito Previdenciário e Direito do Trabalho.
 <div class="container">
 <h3>Cavalcante Advogados</h3>
 <p>
-Dra. Luana Larissa Veríssimo Cavalcante Silva<br>
+Dra. Luana Larissa Veríssimo Cavalcante Silva
+</p>
+
+<p>
+Especialista em Direito Condominial<br>
 João Pessoa - PB
 </p>
+
+<p>
+WhatsApp: (83) 99629-5995
+</p>
+
+<p style="margin-top:20px;font-size:14px;color:#888">
+© 2026 Cavalcante Advogados - Todos os direitos reservados
+</p>
+
 </div>
 </footer>
 
