@@ -3,220 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cavalcanti Advogados | Direito Condominial em João Pessoa</title>
+    <title>Cavalcanti Advogados | Direito Condominial</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         :root {
-            --vinho: #630d16;
-            --vinho-hover: #82111d;
-            --cinza-escuro: #1a1a1a;
-            --cinza-card: #242424;
-            --cinza-claro: #d1d1d1;
-            --branco: #ffffff;
+            --bg-deep: #0a0a0b;       /* Cinza quase preto */
+            --bg-card: #141416;       /* Cinza grafite suave */
+            --accent-gold: #c5a059;   /* Ouro envelhecido (Contraste Nobre) */
+            --accent-vinho: #4a0e0e;  /* Vinho profundo (Autoridade) */
+            --text-main: #e0e0e0;     /* Branco off-white */
+            --text-dim: #a0a0a0;      /* Cinza para textos longos */
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--cinza-escuro);
-            color: var(--branco);
-            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.7;
         }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
+        h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
+        .container { width: 90%; max-width: 1100px; margin: auto; }
 
-        /* Topbar */
+        /* Barra Superior - Sutil */
         .topbar {
-            background: #111;
-            padding: 10px 0;
+            background: #000;
+            padding: 8px 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            color: var(--accent-gold);
             text-align: center;
-            font-size: 13px;
-            border-bottom: 1px solid var(--vinho);
-            color: var(--cinza-claro);
         }
 
-        .topbar span {
-            margin: 0 15px;
-        }
+        .topbar span { margin: 0 20px; }
 
-        .topbar i {
-            color: var(--vinho);
-            margin-right: 5px;
-        }
-
-        /* Header */
+        /* Header Minimalista */
         header {
-            background: rgba(26, 26, 26, 0.95);
-            padding: 15px 0;
+            padding: 25px 0;
+            background: rgba(10, 10, 11, 0.98);
             position: sticky;
             top: 0;
-            z-index: 999;
-            backdrop-filter: blur(10px);
+            z-index: 1000;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
 
-        .logo img {
-            height: 45px;
-            width: auto;
-        }
+        .logo-text { font-family: 'Cinzel'; font-size: 20px; color: var(--branco); border-left: 2px solid var(--accent-gold); padding-left: 15px; }
+        .logo-text span { color: var(--accent-gold); display: block; font-size: 12px; letter-spacing: 4px; }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--branco);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: .3s;
-        }
-
-        nav a:hover {
-            color: var(--vinho);
-        }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { color: var(--text-main); text-decoration: none; font-size: 13px; transition: .4s; font-weight: 400; }
+        nav a:hover { color: var(--accent-gold); }
 
         .cta-nav {
-            background: var(--vinho);
-            padding: 10px 20px;
-            border-radius: 4px;
-            color: white !important;
+            border: 1px solid var(--accent-gold);
+            padding: 8px 20px;
+            color: var(--accent-gold) !important;
+            transition: .4s;
         }
 
-        /* Hero */
+        .cta-nav:hover { background: var(--accent-gold); color: #000 !important; }
+
+        /* Hero - Foco na Autoridade */
         .hero {
-            padding: 140px 0 100px;
+            height: 80vh;
+            display: flex;
+            align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), 
-                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(10, 10, 11, 0.7), rgba(10, 10, 11, 0.9)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
         }
 
-        .hero h1 {
-            font-size: clamp(32px, 5vw, 52px);
-            color: var(--branco);
-            margin-bottom: 20px;
-        }
+        .hero h1 { font-size: clamp(30px, 4vw, 48px); margin-bottom: 20px; color: #fff; }
+        .hero p { font-size: 18px; color: var(--text-dim); max-width: 700px; margin: 0 auto 40px; font-weight: 300; }
 
-        .hero p {
-            color: var(--cinza-claro);
-            font-size: 18px;
-            margin-bottom: 35px;
-        }
-
-        .btn {
-            background: var(--vinho);
-            color: #fff;
-            padding: 16px 35px;
+        .btn-gold {
+            background: var(--accent-gold);
+            color: #000;
+            padding: 18px 40px;
             text-decoration: none;
-            border-radius: 4px;
             font-weight: 600;
-            display: inline-block;
-            transition: .3s;
-            border: none;
-        }
-
-        .btn:hover {
-            background: var(--vinho-hover);
-            transform: translateY(-2px);
-        }
-
-        /* Seções */
-        .section {
-            padding: 90px 0;
-        }
-
-        .section h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            color: var(--branco);
-            font-size: 32px;
-        }
-
-        .section h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background: var(--vinho);
-            margin: 15px auto;
-        }
-
-        /* Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: var(--cinza-card);
-            padding: 40px;
-            border-radius: 4px;
-            border-left: 3px solid transparent;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
             transition: .4s;
         }
 
-        .card:hover {
-            border-left: 3px solid var(--vinho);
-            background: #2a2a2a;
+        .btn-gold:hover { background: #e0bc75; transform: translateY(-3px); }
+
+        /* Seções */
+        .section { padding: 100px 0; }
+        .section h2 { text-align: center; margin-bottom: 60px; font-size: 28px; }
+        .section h2::after {
+            content: ''; display: block; width: 40px; height: 1px; background: var(--accent-gold); margin: 20px auto;
         }
 
-        .card i {
-            font-size: 30px;
-            color: var(--vinho);
-            margin-bottom: 20px;
+        /* Cards Elegantes */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .card {
+            background: var(--bg-card);
+            padding: 50px 40px;
+            border: 1px solid #1f1f22;
+            transition: .4s;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Rodapé */
-        footer {
-            background: #111;
-            padding: 60px 0 20px;
+        .card:hover { border-color: var(--accent-gold); }
+        .card i { color: var(--accent-gold); font-size: 32px; margin-bottom: 25px; }
+        .card h3 { font-size: 18px; margin-bottom: 15px; color: #fff; }
+        .card p { color: var(--text-dim); font-size: 14px; }
+
+        /* Bio */
+        .bio-box {
+            background: var(--bg-card);
+            padding: 60px;
+            border: 1px solid #1f1f22;
             text-align: center;
-            border-top: 1px solid var(--vinho);
-        }
-
-        .footer-info p {
-            margin-bottom: 5px;
         }
 
         .oab-tag {
-            display: inline-block;
-            border: 1px solid var(--vinho);
-            padding: 2px 10px;
-            border-radius: 20px;
+            color: var(--accent-gold);
             font-size: 12px;
-            color: var(--vinho);
-            margin-top: 10px;
-            font-weight: 600;
+            border: 1px solid var(--accent-gold);
+            padding: 4px 15px;
+            margin-top: 20px;
+            display: inline-block;
         }
 
-        /* WhatsApp */
+        /* Footer */
+        footer {
+            padding: 80px 0 30px;
+            background: #050505;
+            text-align: center;
+            border-top: 1px solid #111;
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -230,45 +163,36 @@
             align-items: center;
             justify-content: center;
             font-size: 28px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
             z-index: 1000;
-            text-decoration: none;
-        }
-
-        .fade-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: 0.6s all ease-out;
-        }
-
-        .fade-up.show {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         @media (max-width: 768px) {
             nav ul { display: none; }
+            .hero { height: 60vh; }
         }
     </style>
 </head>
 <body>
 
     <div class="topbar">
-        <span><i class="fa-solid fa-location-dot"></i> João Pessoa - PB</span>
+        <span>JOÃO PESSOA - PB</span>
         <span><i class="fa-solid fa-id-card"></i> OAB/PB 52.447</span>
-        <span><i class="fa-solid fa-phone"></i> (83) 99629-5995</span>
+        <span>(83) 99629-5995</span>
     </div>
 
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">
-                    <img src="logo.png" alt="Cavalcanti Advogados">
-                </a>
+                <div class="logo-text">
+                    CAVALCANTI
+                    <span>ADVOGADOS</span>
+                </div>
                 <ul>
                     <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#areas">Atuação</a></li>
-                    <li><a href="https://wa.me/5583996295995" class="cta-nav">Agendar Consulta</a></li>
+                    <li><a href="#sobre">Dra. Luana</a></li>
+                    <li><a href="#areas">Áreas de Atuação</a></li>
+                    <li><a href="https://wa.me/5583996295995" class="cta-nav">CONSULTA ONLINE</a></li>
                 </ul>
             </nav>
         </div>
@@ -276,41 +200,43 @@
 
     <section class="hero" id="home">
         <div class="container">
-            <h1 class="fade-up">Assessoria Jurídica Condominial</h1>
-            <p class="fade-up">Dra. Luana Larissa V. Cavalcanti Silva | OAB/PB 52.447</p>
-            <a href="https://wa.me/5583996295995" class="btn fade-up">Falar com a Advogada</a>
+            <h1>Assessoria Jurídica Condominial de Alto Padrão</h1>
+            <p>Segurança jurídica e excelência na gestão de condomínios em João Pessoa.</p>
+            <a href="https://wa.me/5583996295995" class="btn-gold">Falar com Especialista</a>
         </div>
     </section>
 
     <section class="section" id="sobre">
         <div class="container">
-            <h2 class="fade-up">A Advogada</h2>
-            <div style="max-width: 800px; margin: auto; text-align: center;" class="fade-up">
-                <p><strong>Dra. Luana Larissa Veríssimo Cavalcanti Silva</strong> é especialista em Direito Condominial, inscrita na <strong>OAB/PB sob o nº 52.447</strong>.</p>
-                <p style="margin-top:15px;">Atua de forma estratégica em João Pessoa, oferecendo consultoria jurídica de alta performance para condomínios, síndicos e administradoras, além de expertise nas áreas trabalhista e previdenciária.</p>
-                <span class="oab-tag">OAB/PB 52.447</span>
+            <div class="bio-box">
+                <h2>A Advogada</h2>
+                <p style="color: #fff; font-size: 18px; margin-bottom: 10px;">Dra. Luana Larissa V. Cavalcanti Silva</p>
+                <p style="max-width: 700px; margin: auto; color: var(--text-dim);">
+                    Especialista em Direito Condominial com atuação pautada na prevenção de litígios e na eficiência administrativa. Oferecemos suporte completo para síndicos e administradoras que buscam profissionalismo e transparência.
+                </p>
+                <div class="oab-tag">OAB/PB 52.447</div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="areas" style="background: #141414;">
+    <section class="section" id="areas">
         <div class="container">
-            <h2 class="fade-up">Áreas de Atuação</h2>
+            <h2>Áreas de Atuação</h2>
             <div class="grid">
-                <div class="card fade-up">
-                    <i class="fa-solid fa-building-shield"></i>
+                <div class="card">
+                    <i class="fa-solid fa-building-circle-check"></i>
                     <h3>Direito Condominial</h3>
-                    <p>Gestão de conflitos, cobrança extrajudicial/judicial e consultoria em assembleias.</p>
+                    <p>Consultoria em assembleias, revisão de convenções e regimentos, e cobrança humanizada de inadimplência.</p>
                 </div>
-                <div class="card fade-up">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <h3>Direito Trabalhista</h3>
-                    <p>Assessoria em relações de trabalho e defesa em processos laborais.</p>
+                <div class="card">
+                    <i class="fa-solid fa-gavel"></i>
+                    <h3>Trabalhista</h3>
+                    <p>Defesa e consultoria para condomínios em questões laborais e terceirizações.</p>
                 </div>
-                <div class="card fade-up">
-                    <i class="fa-solid fa-scale-balanced"></i>
+                <div class="card">
+                    <i class="fa-solid fa-file-invoice"></i>
                     <h3>Previdenciário</h3>
-                    <p>Acompanhamento de processos de aposentadoria e benefícios junto ao INSS.</p>
+                    <p>Planejamento e suporte completo para benefícios junto ao INSS.</p>
                 </div>
             </div>
         </div>
@@ -318,33 +244,21 @@
 
     <footer>
         <div class="container">
-            <div class="footer-info">
-                <p><strong>Dra. Luana Larissa V. Cavalcanti Silva</strong></p>
-                <p style="color: var(--vinho); font-weight: 600;">OAB/PB 52.447</p>
-                <p style="color: var(--cinza-claro); font-size: 14px; margin-top: 10px;">João Pessoa - PB</p>
-                <p style="color: var(--cinza-claro); font-size: 14px;">WhatsApp: (83) 99629-5995</p>
+            <div class="logo-text" style="border: none; margin-bottom: 30px;">
+                CAVALCANTI <span>ADVOGADOS</span>
             </div>
-            <p style="margin-top: 40px; font-size: 12px; color: #444;">
-                © 2026 Cavalcanti Advogados. Todos os direitos reservados.
+            <p style="font-size: 14px; color: var(--text-dim);">
+                Atendimento presencial em João Pessoa e suporte digital para todo o Brasil.
             </p>
+            <div style="margin-top: 40px; border-top: 1px solid #111; padding-top: 30px; font-size: 12px; color: #444;">
+                © 2026 Cavalcanti Advogados. Todos os direitos reservados.
+            </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5583996295995" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5583996295995" class="whatsapp-float">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    </script>
 
 </body>
 </html>
