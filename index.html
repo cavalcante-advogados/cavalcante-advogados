@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cavalcanti Advogados | Direito Condominial em João Pessoa</title>
-    <meta name="description" content="Advogada especialista em Direito Condominial em João Pessoa. Assessoria jurídica para condomínios, direito previdenciário e trabalhista.">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #c40000;
-            --dark: #0f0f0f;
-            --light: #ffffff;
-            --gray: #1a1a1a;
+            --vinho: #630d16;
+            --vinho-hover: #82111d;
+            --cinza-escuro: #1a1a1a;
+            --cinza-card: #242424;
+            --cinza-claro: #d1d1d1;
+            --branco: #ffffff;
         }
 
         * {
@@ -25,43 +26,48 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--dark);
-            color: var(--light);
+            background: var(--cinza-escuro);
+            color: var(--branco);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
 
         .container {
             width: 90%;
-            max-width: 1200px; /* Corrigido de 110px para 1200px */
+            max-width: 1200px;
             margin: auto;
         }
 
         /* Topbar */
         .topbar {
-            background: var(--primary);
+            background: #111;
             padding: 10px 0;
             text-align: center;
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 13px;
+            border-bottom: 1px solid var(--vinho);
+            color: var(--cinza-claro);
         }
 
         .topbar span {
             margin: 0 15px;
         }
 
+        .topbar i {
+            color: var(--vinho);
+            margin-right: 5px;
+        }
+
         /* Header */
         header {
-            background: #000;
-            padding: 20px 0;
-            border-bottom: 1px solid #333;
+            background: rgba(26, 26, 26, 0.95);
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 999;
+            backdrop-filter: blur(10px);
         }
 
         nav {
@@ -71,7 +77,7 @@
         }
 
         .logo img {
-            height: 50px;
+            height: 45px;
             width: auto;
         }
 
@@ -83,49 +89,48 @@
         }
 
         nav a {
-            color: #fff;
+            color: var(--branco);
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 500;
             transition: .3s;
         }
 
         nav a:hover {
-            color: var(--primary);
+            color: var(--vinho);
         }
 
         .cta-nav {
-            background: var(--primary);
+            background: var(--vinho);
             padding: 10px 20px;
             border-radius: 4px;
-            font-weight: 600;
+            color: white !important;
         }
 
         /* Hero */
         .hero {
-            padding: 120px 0 80px;
+            padding: 140px 0 100px;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
         }
 
         .hero h1 {
-            font-size: clamp(32px, 5vw, 56px);
+            font-size: clamp(32px, 5vw, 52px);
+            color: var(--branco);
             margin-bottom: 20px;
-            color: var(--light);
-            max-width: 800px;
-            margin-inline: auto;
         }
 
         .hero p {
+            color: var(--cinza-claro);
             font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            opacity: 0.9;
+            margin-bottom: 35px;
         }
 
         .btn {
-            background: var(--primary);
+            background: var(--vinho);
             color: #fff;
             padding: 16px 35px;
             text-decoration: none;
@@ -134,128 +139,84 @@
             display: inline-block;
             transition: .3s;
             border: none;
-            cursor: pointer;
         }
 
         .btn:hover {
-            background: #e60000;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(196, 0, 0, 0.3);
+            background: var(--vinho-hover);
+            transform: translateY(-2px);
         }
 
-        /* Sections */
+        /* Seções */
         .section {
-            padding: 100px 0;
+            padding: 90px 0;
         }
 
         .section h2 {
             text-align: center;
-            margin-bottom: 60px;
-            color: var(--primary);
-            font-size: 36px;
-            position: relative;
+            margin-bottom: 50px;
+            color: var(--branco);
+            font-size: 32px;
         }
 
         .section h2::after {
             content: '';
             display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary);
+            width: 50px;
+            height: 2px;
+            background: var(--vinho);
             margin: 15px auto;
         }
 
-        /* Grid de Áreas */
+        /* Cards */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .card {
-            background: var(--gray);
+            background: var(--cinza-card);
             padding: 40px;
-            border-radius: 8px;
+            border-radius: 4px;
+            border-left: 3px solid transparent;
             transition: .4s;
-            border: 1px solid #222;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-        }
-
-        .card.featured {
-            border: 1px solid var(--primary);
-            background: #111;
+            border-left: 3px solid var(--vinho);
+            background: #2a2a2a;
         }
 
         .card i {
-            font-size: 35px;
+            font-size: 30px;
+            color: var(--vinho);
             margin-bottom: 20px;
-            color: var(--primary);
         }
 
-        .card h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-
-        /* Diferenciais */
-        .diferenciais {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .diferencial {
-            background: #111;
-            padding: 30px;
-            text-align: center;
-            border-radius: 8px;
-        }
-
-        .diferencial h4 {
-            color: var(--primary);
-            margin-bottom: 5px;
-            font-size: 18px;
-        }
-
-        /* Form */
-        .form {
-            max-width: 600px;
-            margin: auto;
-        }
-
-        .form input, .form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            background: #111;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 4px;
-            outline: none;
-        }
-
-        .form input:focus, .form textarea:focus {
-            border-color: var(--primary);
-        }
-
-        /* Footer */
+        /* Rodapé */
         footer {
-            background: #000;
-            padding: 60px 0 30px;
+            background: #111;
+            padding: 60px 0 20px;
             text-align: center;
-            border-top: 1px solid #222;
+            border-top: 1px solid var(--vinho);
         }
 
-        .footer-logo img {
-            height: 60px;
-            margin-bottom: 20px;
+        .footer-info p {
+            margin-bottom: 5px;
         }
 
-        /* WhatsApp Float */
+        .oab-tag {
+            display: inline-block;
+            border: 1px solid var(--vinho);
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--vinho);
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -268,22 +229,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            text-decoration: none;
+            font-size: 28px;
             z-index: 1000;
-            transition: .3s;
+            text-decoration: none;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        /* Animações */
         .fade-up {
             opacity: 0;
-            transform: translateY(30px);
-            transition: 0.8s all ease-out;
+            transform: translateY(20px);
+            transition: 0.6s all ease-out;
         }
 
         .fade-up.show {
@@ -291,12 +245,8 @@
             transform: translateY(0);
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             nav ul { display: none; }
-            .hero { padding: 80px 0; }
-            .section { padding: 60px 0; }
-            .topbar span { display: block; margin: 5px 0; }
         }
     </style>
 </head>
@@ -304,6 +254,7 @@
 
     <div class="topbar">
         <span><i class="fa-solid fa-location-dot"></i> João Pessoa - PB</span>
+        <span><i class="fa-solid fa-id-card"></i> OAB/PB 52.447</span>
         <span><i class="fa-solid fa-phone"></i> (83) 99629-5995</span>
     </div>
 
@@ -314,11 +265,10 @@
                     <img src="logo.png" alt="Cavalcanti Advogados">
                 </a>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#areas">Áreas</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://wa.me/5583996295995" class="cta-nav">Fale com Especialista</a></li>
+                    <li><a href="#areas">Atuação</a></li>
+                    <li><a href="https://wa.me/5583996295995" class="cta-nav">Agendar Consulta</a></li>
                 </ul>
             </nav>
         </div>
@@ -326,92 +276,56 @@
 
     <section class="hero" id="home">
         <div class="container">
-            <h1 class="fade-up">Especialista em Direito Condominial</h1>
-            <p class="fade-up">Assessoria jurídica completa e estratégica para condomínios, síndicos e administradoras em João Pessoa.</p>
-            <a href="https://wa.me/5583996295995" class="btn fade-up">Agendar Consulta</a>
+            <h1 class="fade-up">Assessoria Jurídica Condominial</h1>
+            <p class="fade-up">Dra. Luana Larissa V. Cavalcanti Silva | OAB/PB 52.447</p>
+            <a href="https://wa.me/5583996295995" class="btn fade-up">Falar com a Advogada</a>
         </div>
     </section>
 
     <section class="section" id="sobre">
         <div class="container">
-            <h2 class="fade-up">Sobre a Advogada</h2>
+            <h2 class="fade-up">A Advogada</h2>
             <div style="max-width: 800px; margin: auto; text-align: center;" class="fade-up">
-                <p><strong>Dra. Luana Larissa Veríssimo Cavalcanti Silva</strong> é referência em Direito Condominial em João Pessoa. Com atuação pautada na ética e na resolução eficiente de conflitos, oferece suporte jurídico indispensável para a harmonia e segurança jurídica da gestão condominial.</p>
-                <p style="margin-top: 20px;">Além da especialização em condomínios, possui sólida experiência nas áreas de <strong>Direito Previdenciário</strong> e <strong>Direito do Trabalho</strong>, garantindo um atendimento multidisciplinar aos seus clientes.</p>
+                <p><strong>Dra. Luana Larissa Veríssimo Cavalcanti Silva</strong> é especialista em Direito Condominial, inscrita na <strong>OAB/PB sob o nº 52.447</strong>.</p>
+                <p style="margin-top:15px;">Atua de forma estratégica em João Pessoa, oferecendo consultoria jurídica de alta performance para condomínios, síndicos e administradoras, além de expertise nas áreas trabalhista e previdenciária.</p>
+                <span class="oab-tag">OAB/PB 52.447</span>
             </div>
         </div>
     </section>
 
-    <section class="section" id="areas" style="background: #0a0a0a;">
+    <section class="section" id="areas" style="background: #141414;">
         <div class="container">
             <h2 class="fade-up">Áreas de Atuação</h2>
             <div class="grid">
-                <div class="card featured fade-up">
-                    <i class="fa-solid fa-building"></i>
-                    <h3>Direito Condominial</h3>
-                    <p>Cobranças, elaboração de convenções, acompanhamento de assembleias, mediação de conflitos e consultoria preventiva para síndicos.</p>
-                </div>
-
                 <div class="card fade-up">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                    <h3>Direito Previdenciário</h3>
-                    <p>Planejamento, pedidos de aposentadoria, pensões e recursos administrativos ou judiciais junto ao INSS.</p>
+                    <i class="fa-solid fa-building-shield"></i>
+                    <h3>Direito Condominial</h3>
+                    <p>Gestão de conflitos, cobrança extrajudicial/judicial e consultoria em assembleias.</p>
                 </div>
-
                 <div class="card fade-up">
                     <i class="fa-solid fa-briefcase"></i>
-                    <h3>Direito do Trabalho</h3>
-                    <p>Defesa de direitos trabalhistas, consultoria para empresas e empregados, rescisões e reclamações trabalhistas.</p>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Assessoria em relações de trabalho e defesa em processos laborais.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="fade-up">Diferenciais</h2>
-            <div class="diferenciais fade-up">
-                <div class="diferencial">
-                    <h4>Especialização</h4>
-                    <p>Foco total em Condomínios</p>
+                <div class="card fade-up">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h3>Previdenciário</h3>
+                    <p>Acompanhamento de processos de aposentadoria e benefícios junto ao INSS.</p>
                 </div>
-                <div class="diferencial">
-                    <h4>Localização</h4>
-                    <p>Atendimento em João Pessoa</p>
-                </div>
-                <div class="diferencial">
-                    <h4>Prevenção</h4>
-                    <p>Consultoria Preventiva</p>
-                </div>
-                <div class="diferencial">
-                    <h4>Agilidade</h4>
-                    <p>Suporte Jurídico Rápido</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="contato">
-        <div class="container">
-            <h2 class="fade-up">Contato</h2>
-            <div class="form fade-up">
-                <input type="text" placeholder="Seu Nome">
-                <input type="email" placeholder="Seu E-mail">
-                <textarea rows="5" placeholder="Como podemos ajudar?"></textarea>
-                <button class="btn" style="width: 100%;">Enviar Mensagem</button>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="footer-logo">
-                <img src="logo.png" alt="Cavalcanti Advogados">
+            <div class="footer-info">
+                <p><strong>Dra. Luana Larissa V. Cavalcanti Silva</strong></p>
+                <p style="color: var(--vinho); font-weight: 600;">OAB/PB 52.447</p>
+                <p style="color: var(--cinza-claro); font-size: 14px; margin-top: 10px;">João Pessoa - PB</p>
+                <p style="color: var(--cinza-claro); font-size: 14px;">WhatsApp: (83) 99629-5995</p>
             </div>
-            <p><strong>Dra. Luana Larissa V. Cavalcanti Silva</strong></p>
-            <p>Especialista em Direito Condominial | OAB/PB</p>
-            <p style="margin-top: 20px; font-size: 13px; color: #666;">
-                © 2026 Cavalcanti Advogados - Todos os direitos reservados.
+            <p style="margin-top: 40px; font-size: 12px; color: #444;">
+                © 2026 Cavalcanti Advogados. Todos os direitos reservados.
             </p>
         </div>
     </footer>
@@ -421,7 +335,6 @@
     </a>
 
     <script>
-        // Animação de Scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
